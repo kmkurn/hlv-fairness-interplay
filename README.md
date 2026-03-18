@@ -1,5 +1,5 @@
 # hlv-fairness-interplay
-Code for our paper "On the Interplay between Human Label Variation and Model Fairness"
+Code and data for our paper "On the Interplay between Human Label Variation and Model Fairness"
 
 ## Requirements
 
@@ -15,9 +15,9 @@ If you have a non-Linux system or a different version of CUDA/Python, you may ne
 
 Ensure that everything works by running the tests with `pytest`.
 
-## Data
+## Datasets
 
-Download the SBIC dataset from https://maartensap.com/social-bias-frames/. For TAG, please see https://github.com/kmkurn/train-eval-hlv.
+Download the SBIC dataset from https://maartensap.com/social-bias-frames/.
 
 ## Training
 
@@ -46,6 +46,10 @@ The `run_training.py` script already performs evaluation after training complete
 ```
 
 The above invocation evaluates training artifacts under directory `artifacts` using arithmetic mean for the group-wise aggregation when computing the fairness score. To compute the fairness score for each group and class (without aggregation), the `compute_fair_scores.py` script can be used. Invoke this script with `-h` or `--help` option to see its usage.
+
+## Model weights and predictions
+
+Due to the large number of dataset&ndash;model&ndash;method combinations, please email [me](mailto:kurniawan.k@unimelb.edu.au) to request access to specific model weights or predictions.
 
 ## MongoDB integration with Sacred
 
